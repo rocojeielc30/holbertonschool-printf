@@ -35,6 +35,11 @@ int _printf(const char *format, ...)
 					count += print_char(args);
 					i++;
 				}
+				else if (format[i + 1] == 'i' || format[i+1] == 'd')
+				{
+					count += print_integer(args);
+					i++;
+				}
 				else if (format[i + 1] == '\0')
 				{
 					break;
